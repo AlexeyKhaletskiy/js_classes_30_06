@@ -47,3 +47,49 @@ class RangeValidator {
 }
 
 const range = new RangeValidator(3, 15);
+
+
+class Figure3D {
+  constructor(name) {
+    this.name = name;
+  }
+  getVolume() {
+    return null;
+  }
+}
+
+class Cube extends Figure3D {
+  constructor(side) {
+    super("Cube");
+    this.side = side;
+  }
+  getVolume() {
+    return this.side ** 3;
+  }
+}
+
+const cube = new Cube(3);
+
+class Sphere extends Figure3D {
+  constructor(radius) {
+    super("Sphere");
+    this.radius = radius;
+  }
+  getVolume() {
+    return (4 / 3) * Math.PI * this.radius ** 3;
+  }
+}
+
+const sphere = new Sphere(4);
+
+class Cylinder extends Figure3D {
+  constructor(radius, height) {
+    super("Cylinder");
+    this.radius = radius;
+    this.height = height;
+  }
+  getVolume() {
+    return Math.PI * this.radius ** 2 * this.height;
+  }
+}
+const cylinder = new Cylinder(2, 3);
